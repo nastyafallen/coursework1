@@ -46,19 +46,23 @@ public class Main {
 
     public static void salaryCounter(Employee[] employee) {
         int minNumber = employee[0].getSalary();
+        String nameMinNumber = employee[0].getName();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i].getSalary() < minNumber) {
                 minNumber = employee[i].getSalary();
+                nameMinNumber = employee[i].getName();
             }
         }
-        System.out.println("Минимальная зарплата составила = " + minNumber + " рублей");
+        System.out.println("Минимальная зарплата составила = " + minNumber + " рублей, имя сотрудника - " + nameMinNumber);
         int maxNumber = employee[employee.length-1].getSalary();
+        String nameMaxNumber = employee[employee.length - 1].getName();
         for (int i = employee.length - 1; i >= 0; i--) {
             if (employee[i].getSalary() > maxNumber) {
                 maxNumber = employee[i].getSalary();
+                nameMaxNumber = employee[i].getName();
             }
         }
-        System.out.println("Максимальная зарплата составила = " + maxNumber + " рублей");
+        System.out.println("Максимальная зарплата составила = " + maxNumber + " рублей, имя сотрудника - " + nameMaxNumber);
         System.out.println();
     }
 
