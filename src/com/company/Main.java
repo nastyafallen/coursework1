@@ -68,8 +68,8 @@ public class Main {
 
     public static void nameService(Employee[] employee) {
         System.out.println("Имена всех сотрудников: ");
-        for (int i = 0; i < employee.length; i++) {
-            System.out.println(employee[i].getName());
+        for (Employee value : employee) {
+            System.out.println(value.getName());
         }
     }
 }
